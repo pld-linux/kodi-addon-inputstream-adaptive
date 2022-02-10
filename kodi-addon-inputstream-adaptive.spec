@@ -5,12 +5,12 @@
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
-Version:	%{kodi_ver}.0.2
+Version:	%{kodi_ver}.0.3
 Release:	1
 License:	GPL v2+
 Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
-# Source0-md5:	1bfb4731c249e01535c2c4054e0e4ea6
+# Source0-md5:	985308ef1521776553300933cf8be63e
 URL:		https://github.com/xbmc/inputstream.adaptive
 BuildRequires:	cmake >= 3.10
 BuildRequires:	expat-devel
