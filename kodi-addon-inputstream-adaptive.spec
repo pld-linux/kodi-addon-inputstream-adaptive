@@ -1,16 +1,19 @@
-%define		kodi_ver	19
+# TODO:
+# - package Bento4 and use system one
+
+%define		kodi_ver	20
 %define		next_kodi_ver	%(echo $((%{kodi_ver}+1)))
-%define		codename	Matrix
+%define		codename	Nexus
 %define		addon		inputstream.adaptive
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
-Version:	%{kodi_ver}.0.7
+Version:	%{kodi_ver}.3.2
 Release:	1
 License:	GPL v2+
 Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
-# Source0-md5:	679d70dbca94e14360dfcf0261cfe032
+# Source0-md5:	aa5a2232ad124d725f66963dbfb0b8cc
 URL:		https://github.com/xbmc/inputstream.adaptive
 BuildRequires:	cmake >= 3.10
 BuildRequires:	expat-devel
@@ -30,7 +33,8 @@ Kodi InputStream addon for several manifest types
 
 %build
 %cmake -B build \
-	-DBUILD_TESTING:BOOL=OFF
+	-DBUILD_TESTING:BOOL=OFF \
+	-DENABLE_INTERNAL_BENTO4:BOOL=ON
 %{__make} -C build
 
 %install
@@ -48,4 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kodi/addons/%{addon}/libssd_wv.so
 %dir %{_datadir}/kodi/addons/%{addon}
 %{_datadir}/kodi/addons/%{addon}/addon.xml
+%{_datadir}/kodi/addons/%{addon}/changelog.txt
+%{_datadir}/kodi/addons/%{addon}/fanart.jpg
+%{_datadir}/kodi/addons/%{addon}/icon.png
 %{_datadir}/kodi/addons/%{addon}/resources
