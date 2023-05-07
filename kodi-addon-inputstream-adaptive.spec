@@ -6,19 +6,20 @@
 %define		codename	Nexus
 %define		addon		inputstream.adaptive
 
-%define		bento4_ver	1.6.0-639-6-Nexus
+%define		bento4_ver	1.6.0-639-7-Omega
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
-Version:	%{kodi_ver}.3.6
+Version:	%{kodi_ver}.3.7
 Release:	1
 License:	GPL v2+
 Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
-# Source0-md5:	9aa4b4bd2534107115ee3be0ec1ce8be
+# Source0-md5:	ebdd8b3582912ac11eacc5b7df84b9f3
 Source1:	https://github.com/xbmc/Bento4/archive/%{bento4_ver}/Bento4-%{bento4_ver}.tar.gz
-# Source1-md5:	4322bd0076bf1fde49b389e73b821efa
+# Source1-md5:	5532a65b8da2e051b70de761ee84141d
 Patch0:		bento4-hash.patch
+Patch1:		gcc13.patch
 URL:		https://github.com/xbmc/inputstream.adaptive
 BuildRequires:	cmake >= 3.10
 BuildRequires:	expat-devel
@@ -36,6 +37,7 @@ Kodi InputStream addon for several manifest types
 %prep
 %setup -q -n %{addon}-%{version}-%{codename}
 %patch0 -p1
+%patch1 -p1
 
 install -d build/download
 cp -p %{SOURCE1} build/download/%{bento4_ver}.tar.gz
