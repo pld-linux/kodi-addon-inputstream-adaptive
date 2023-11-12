@@ -6,7 +6,7 @@
 %define		codename	Omega
 %define		addon		inputstream.adaptive
 
-%define		bento4_ver	1.6.0-639-7-Omega
+%define		bento4_ver	1.6.0-639-8-Omega
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
@@ -17,7 +17,7 @@ Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
 # Source0-md5:	0ee0bcd3c16bd737663dcad8b24b88c8
 Source1:	https://github.com/xbmc/Bento4/archive/%{bento4_ver}/Bento4-%{bento4_ver}.tar.gz
-# Source1-md5:	5532a65b8da2e051b70de761ee84141d
+# Source1-md5:	dbb5808c81aa0e6c0eda484b6e4fc93f
 Patch0:		bento4-hash.patch
 URL:		https://github.com/xbmc/inputstream.adaptive
 BuildRequires:	cmake >= 3.10
