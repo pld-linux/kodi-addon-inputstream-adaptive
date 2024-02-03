@@ -10,12 +10,12 @@
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
-Version:	%{kodi_ver}.3.16
+Version:	%{kodi_ver}.3.17
 Release:	1
 License:	GPL v2+
 Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
-# Source0-md5:	bb725fe7f0e6bbcbcdf511b6ee9eac54
+# Source0-md5:	f40756c66374bd2c9958de8aacd6d740
 Source1:	https://github.com/xbmc/Bento4/archive/%{bento4_ver}/Bento4-%{bento4_ver}.tar.gz
 # Source1-md5:	5532a65b8da2e051b70de761ee84141d
 Patch0:		bento4-hash.patch
