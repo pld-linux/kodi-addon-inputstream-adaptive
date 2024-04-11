@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kodi/addons/%{addon}/%{addon}.so.%{version}
 %attr(755,root,root) %ghost %{_libdir}/kodi/addons/%{addon}/%{addon}.so.21.0
 %ifarch aarch64
-%attr(755,root,root) %ghost %{_libdir}/kodi/addons/%{addon}/libcdm_aarch64_loader.so
+%attr(755,root,root) %{_libdir}/kodi/addons/%{addon}/libcdm_aarch64_loader.so
 %endif
 %dir %{_datadir}/kodi/addons/%{addon}
 %{_datadir}/kodi/addons/%{addon}/addon.xml
