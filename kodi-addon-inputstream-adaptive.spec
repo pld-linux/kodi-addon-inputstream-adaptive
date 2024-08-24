@@ -11,12 +11,12 @@
 
 Summary:	Kodi InputStream addon for several manifest types
 Name:		kodi-addon-inputstream-adaptive
-Version:	21.5.2
+Version:	21.5.3
 Release:	1
 License:	GPL v2+
 Group:		Applications/Multimedia
 Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{codename}/%{version}-%{codename}.tar.gz
-# Source0-md5:	1e5196a02ca3079abb2fd9ceb665e50e
+# Source0-md5:	3e47ac76dcfb5daa85043e4a2f37c562
 Source1:	https://github.com/xbmc/Bento4/archive/%{bento4_ver}/Bento4-%{bento4_ver}.tar.gz
 # Source1-md5:	7cefb139db93ab2417635f003cd7a7b5
 Patch0:		bento4-hash.patch
