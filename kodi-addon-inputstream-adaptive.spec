@@ -2,7 +2,6 @@
 # - package Bento4 and use system one
 
 %define		kodi_ver	21
-%define		kodi_ver_minor	%(rpm -q --qf='%%{VERSION}' kodi-devel | awk -F . '{print $2}' || echo ERROR)
 %define		next_kodi_ver	%(echo $((%{kodi_ver}+1)))
 %define		codename	Omega
 %define		addon		inputstream.adaptive
@@ -29,7 +28,7 @@ BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pugixml-devel
 BuildRequires:	rapidjson-devel
 BuildRequires:	rpmbuild(macros) >= 1.605
-Requires:	kodi >= %{kodi_ver}.%{kodi_ver_minor}
+Requires:	kodi >= %{kodi_ver}
 Requires:	kodi < %{next_kodi_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{_libdir}/kodi/addons/%{addon}
 %attr(755,root,root) %{_libdir}/kodi/addons/%{addon}/%{addon}.so.%{version}
-%attr(755,root,root) %ghost %{_libdir}/kodi/addons/%{addon}/%{addon}.so.%{kodi_ver}.%{kodi_ver_minor}
 %ifarch aarch64
 %attr(755,root,root) %{_libdir}/kodi/addons/%{addon}/libcdm_aarch64_loader.so
 %endif
