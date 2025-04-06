@@ -37,7 +37,7 @@ Kodi InputStream addon for several manifest types
 
 %prep
 %setup -q -n %{addon}-%{version}-%{codename}
-%patch0 -p1
+%patch -P0 -p1
 
 install -d build/download
 cp -p %{SOURCE1} build/download/%{bento4_ver}.tar.gz
