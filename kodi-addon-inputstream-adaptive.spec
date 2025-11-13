@@ -19,6 +19,7 @@ Source0:	https://github.com/xbmc/inputstream.adaptive/archive/%{version}-%{coden
 Source1:	https://github.com/xbmc/Bento4/archive/%{bento4_ver}/Bento4-%{bento4_ver}.tar.gz
 # Source1-md5:	7cefb139db93ab2417635f003cd7a7b5
 Patch0:		bento4-hash.patch
+Patch1:		includes.patch
 URL:		https://github.com/xbmc/inputstream.adaptive
 BuildRequires:	cmake >= 3.10
 BuildRequires:	expat-devel
@@ -38,6 +39,7 @@ Kodi InputStream addon for several manifest types
 %prep
 %setup -q -n %{addon}-%{version}-%{codename}
 %patch -P0 -p1
+%patch -P1 -p1
 
 install -d build/download
 cp -p %{SOURCE1} build/download/%{bento4_ver}.tar.gz

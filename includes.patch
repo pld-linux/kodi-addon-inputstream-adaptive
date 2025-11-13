@@ -1,0 +1,21 @@
+From 6ea898ca77f3062f6c5cf851dad66bdf83a7866b Mon Sep 17 00:00:00 2001
+From: Rudi Heitbaum <rudi@heitbaum.com>
+Date: Wed, 5 Nov 2025 04:01:33 +1100
+Subject: [PATCH] [AdaptiveUtils] Add missing include <cstdint>
+
+---
+ src/common/AdaptiveUtils.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/common/AdaptiveUtils.h b/src/common/AdaptiveUtils.h
+index 0bc17bc65..8cdf2da83 100644
+--- a/src/common/AdaptiveUtils.h
++++ b/src/common/AdaptiveUtils.h
+@@ -9,6 +9,7 @@
+ #pragma once
+ 
+ #include <algorithm>
++#include <cstdint>
+ #include <limits>
+ #include <memory>
+ #include <string_view>
